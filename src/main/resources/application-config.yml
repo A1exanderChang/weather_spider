@@ -1,0 +1,30 @@
+url:
+  # 天气预报请求地址
+  weather-city-url: "http://www.nmc.cn/rest/weather"
+  # 预警信号请求地址
+  weather-alert-url: "http://www.nmc.cn/rest/findAlarm"
+  # 预警详情页面请求地址
+  weather-alert-detail-url: "http://www.nmc.cn"
+
+cron:
+  # 城市天气，每隔10秒查询一次
+  weather-city-cron: "0/10 * * * * ?"
+  # 预警型号，每10分钟查询一次
+  weather-alert-cron: "0 0/10 * * * ?"
+
+param:
+  province: "河南"
+  page-no: 1
+  page-size: 100
+
+# 请求头
+http-header:
+  header:
+    "Accept": "application/json, text/javascript, */*; q=0.01"
+    "Accept-Encoding": "gzip, deflate"
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+    "Connection": "keep-alive"
+    "Host": "www.nmc.cn"
+    "Referer": "http://www.nmc.cn"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37"
+    "X-Requested-With": "XMLHttpRequest"

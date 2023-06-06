@@ -1,0 +1,24 @@
+mysql:
+  url: jdbc:mysql://192.168.10.233:3306/weather_spider?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&TimeZone=Asia/Shanghai
+  username: root
+  password: root
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  # 初始化数量
+  initial-size: 5
+  # 最小数量
+  min-idle: 5
+  # 最大数量
+  max-active: 20
+  # 最大等待时间
+  max-wati: 60000
+  # 配置检测可以关闭的空闲链接间隔时间，单位ms
+  time-between-eviction-runs-millis: 60000
+  # 配置连接在池内最小生存时间
+  min-evictable-idle-time-millis: 30000
+  # 配置检测连接是否有效
+  validation-query: select 1 from dual
+  test-while-idle: true
+  test-on-borrow: false
+  test-on-return: false
+  # 监控统计拦截的filters
+  filters: stat

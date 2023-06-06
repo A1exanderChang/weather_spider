@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ebs.weather_spider.mapper.WeatherRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.ebs.weather_spider.entity.WeatherRecord">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="temperature" column="temperature" jdbcType="VARCHAR"/>
+            <result property="humidity" column="humidity" jdbcType="VARCHAR"/>
+            <result property="rain" column="rain" jdbcType="VARCHAR"/>
+            <result property="feelst" column="feelst" jdbcType="VARCHAR"/>
+            <result property="info" column="info" jdbcType="VARCHAR"/>
+            <result property="wind_direct" column="wind_direct" jdbcType="VARCHAR"/>
+            <result property="wind_power" column="wind_power" jdbcType="VARCHAR"/>
+            <result property="wind_speed" column="wind_speed" jdbcType="VARCHAR"/>
+            <result property="publish_time" column="publish_time" jdbcType="TIMESTAMP"/>
+            <result property="gmt_create" column="gmt_create" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,province,
+        code,url,temperature,
+        humidity,rain,feelst,
+        info,wind_direct,wind_power,
+        wind_speed,publish_time,gmt_create
+    </sql>
+</mapper>

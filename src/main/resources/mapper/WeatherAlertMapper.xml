@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ebs.weather_spider.mapper.WeatherAlertMapper">
+
+    <resultMap id="BaseResultMap" type="com.ebs.weather_spider.entity.WeatherAlert">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="alertid" column="alertid" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="level" column="level" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+            <result property="pic" column="pic" jdbcType="VARCHAR"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="issuetime" column="issuetime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,alertid,title,
+        level,type,pic,
+        url,content,
+        issuetime
+    </sql>
+</mapper>
